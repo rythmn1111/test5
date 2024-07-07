@@ -1,10 +1,13 @@
 import styles from "@/styles/Home.module.scss";
 import { FC } from "react";
-import ProcessLoader from "../../contexts/process";
+import {ProcessProvider} from "../../contexts/process";
+import WindowManager from "../../components/system/WindowManager";
 
 
 
 
 export default function Home() {
-  return <ProcessLoader />;
+  return <ProcessProvider>
+    <WindowManager />
+  </ProcessProvider>;
 }

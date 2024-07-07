@@ -4,6 +4,6 @@ export type Process = {
     Component: ComponentType;
 };
 
-export type Processes={
+export type Processes=Partial<{
     [id: string]: Process;
-}
+}>;
